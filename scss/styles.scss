@@ -1,0 +1,16 @@
+//Un comentario como este no se va a imprimir en la hoja de estilo .css. Para que se impriman hay que usar los comentarios de siempre /**/
+
+//Variables: se definen con "$" como en php. Importante acabar con ; Se pueden guardar en otro archivo para facilitar el modularizado.
+//$font-main: sans-serif;
+//$font-second: Impact;
+//$font-sm: 2.5em;
+
+//Utilidades
+@import './variables';
+@import './mixins';
+@import './placeholders';
+
+//CSS
+@import './base'; 
+@import './buttons';
+@import './layout';

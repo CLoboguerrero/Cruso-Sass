@@ -1,0 +1,15 @@
+//El & para el hover únicamente es para la clase (botón)
+.btn {
+    padding: 12px 30px;
+    background-color: salmon;
+    font-size: 20px;
+    &:hover {
+        background-color: chocolate;
+    }
+    &-lg {
+        font-size: 30px;
+        &-bg-blue {
+            background-color: blue;
+        }
+    }
+}

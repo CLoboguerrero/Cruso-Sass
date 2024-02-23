@@ -1,0 +1,20 @@
+//Estilos base BODY, H's, a, p, etc...
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightseagreen;
+    font-size: small;
+}
+
+h1 {
+    font-family: $font-main;
+    font-size: $font-sm;
+}
+
+a {
+    text-decoration: dashed;
+    display: inline-block;
+}

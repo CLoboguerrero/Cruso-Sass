@@ -1,0 +1,109 @@
+//@use "sass:map"; con este modo se usa map.get
+//@use es una nueva funcinalidad de SASS
+//De otra manera, se usa map-get sin hacer uso del @use
+
+.container {
+    max-width: 1200px;
+    border: 1px solid map-get($colors, "light-blue" );
+    margin: auto;
+    @media (min-width: map-get($break-points, "sm")) {
+        width: 80%;
+    }
+    @media (min-width: map-get($break-points, "md")) {
+        width: 90%;
+    }
+}
+
+
+//A la siguiente clase le estamos asignando las propiedades definidas en el mixin "flex". Importante poner "@include"
+.card {
+    @include flex(flex, start, center);
+}
+
+//Los mixins crean reglas de estilo SEPARADAS. Cuando queremos que dos clases tengan el mismo estilo, entonces se usa el placeholder.
+.column-footer {
+    @include flex(inline-flex, space-between, stretch);
+}
+
+//La siguiente clase tiene los valores por defecto declarados en los parámetros del mixin
+.navigation {
+    @include flex;
+}
+
+.otra-class {
+    @include flex($ai: center);
+}
+
+//Ejemplo para usar el placeholder:
+.special-text {
+    @extend %fontSizeLarge;
+}
+
+.other-text {
+    @extend %fontSizeLarge;
+}
+
+
+//Ejemplo de funciones implementadas dentro de SASS:
+//Percentage por ejemplo 345px dentro de un contenedor que tiene 860px:
+// .column {
+//     width: percentage(345 / 860);
+//     background-color: rgba(map-get($colors, "lemon"), 0.5);
+//     border: solid 2px darken(map-get($colors, "lemon"), 30)
+// }
+
+//Se pueden crear variables locales como:
+.column {
+    $baseColor: map-get($colors, "lemon"); /*Variable local*/
+
+    width: percentage(345 / 860);
+    background-color: rgba($baseColor, 0.5); /*Se manda a llamar aquí*/
+    border: solid 2px darken(map-get($colors, "lemon"), 30);
+
+    /*Se puede emplear la función @debug para imprimir en consola OJO, al parecer no funciona :( */
+    @debug "Holi, es aqui!";
+
+    box-shadow: 0 0 5px lighten($baseColor, 30);
+}
+
+
+//Iteraciones con Sass:
+//Ejemplo FOR de lista de una variable
+$names: "small", "large", "medium", "x-large";
+
+@for $oneName from 1 through length($names) {
+    .test {
+        color: red;
+    }
+}
+
+@for $otherName from 1 through length($names){
+    .col-#{$otherName} {
+        color: blue;
+    }
+}
+
+@each $sampleName in $names {
+    .sample-#{$sampleName} {
+        color: lightsalmon;
+    }
+}
+
+@for $i from 1 through 12 {
+    .dog-#{$i} {
+        color: lightcyan;
+    }
+}
+
+$typos: (
+    "cool": Tahoma,
+    "noCool": "Comic Sans MS",
+    "extraCool": "Impact",
+);
+
+@each $key, $value in $typos {
+    .typo-#{$key} {
+        font-family: $value;
+        font-size: 13px;
+    }
+}

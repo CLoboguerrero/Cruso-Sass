@@ -1,0 +1,21 @@
+//Se debe crear el archivo parcial con un guin bajo antes del nombre para que no sea considerado como un archivo único. Importarlo como cualquier otro a la hoja de estilos de Sass
+
+$font-main: sans-serif;
+$font-second: Impact;
+$font-sm: 3.5em;
+//$md-viewport: 460px;
+
+//variables de mapa (similar a objetos):
+//Ojo este ejemplo se va al archivo _layout.sccs
+//"Array" asociativo al estilo php (key:value)
+$break-points : (
+    "sm": 460px,
+    "md": 760px,
+);
+
+$colors :(
+    "white": white,
+    "black": black,
+    "light-blue": rgb(63, 63, 167),
+    "lemon": #bad422,
+)

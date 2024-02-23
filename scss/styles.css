@@ -1,0 +1,205 @@
+@charset "UTF-8";
+.other-text, .special-text {
+  line-height: 1.5em;
+  font-size: 50px;
+  font-family: Impact;
+  font-style: italic;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightseagreen;
+  font-size: small;
+}
+
+h1 {
+  font-family: sans-serif;
+  font-size: 3.5em;
+}
+
+a {
+  text-decoration: dashed;
+  display: inline-block;
+}
+
+.btn {
+  padding: 12px 30px;
+  background-color: salmon;
+  font-size: 20px;
+}
+.btn:hover {
+  background-color: chocolate;
+}
+.btn-lg {
+  font-size: 30px;
+}
+.btn-lg-bg-blue {
+  background-color: blue;
+}
+
+.container {
+  max-width: 1200px;
+  border: 1px solid rgb(63, 63, 167);
+  margin: auto;
+}
+@media (min-width: 460px) {
+  .container {
+    width: 80%;
+  }
+}
+@media (min-width: 760px) {
+  .container {
+    width: 90%;
+  }
+}
+
+.card {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.column-footer {
+  flex-wrap: wrap;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.navigation {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+
+.otra-class {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.column {
+  /*Variable local*/
+  width: 40.1162790698%;
+  background-color: rgba(186, 212, 34, 0.5); /*Se manda a llamar aquí*/
+  border: solid 2px #46500d;
+  /*Se puede emplear la función @debug para imprimir en consola OJO, al parecer no funciona :( */
+  box-shadow: 0 0 5px #e4f09f;
+}
+
+.test {
+  color: red;
+}
+
+.test {
+  color: red;
+}
+
+.test {
+  color: red;
+}
+
+.test {
+  color: red;
+}
+
+.col-1 {
+  color: blue;
+}
+
+.col-2 {
+  color: blue;
+}
+
+.col-3 {
+  color: blue;
+}
+
+.col-4 {
+  color: blue;
+}
+
+.sample-small {
+  color: lightsalmon;
+}
+
+.sample-large {
+  color: lightsalmon;
+}
+
+.sample-medium {
+  color: lightsalmon;
+}
+
+.sample-x-large {
+  color: lightsalmon;
+}
+
+.dog-1 {
+  color: lightcyan;
+}
+
+.dog-2 {
+  color: lightcyan;
+}
+
+.dog-3 {
+  color: lightcyan;
+}
+
+.dog-4 {
+  color: lightcyan;
+}
+
+.dog-5 {
+  color: lightcyan;
+}
+
+.dog-6 {
+  color: lightcyan;
+}
+
+.dog-7 {
+  color: lightcyan;
+}
+
+.dog-8 {
+  color: lightcyan;
+}
+
+.dog-9 {
+  color: lightcyan;
+}
+
+.dog-10 {
+  color: lightcyan;
+}
+
+.dog-11 {
+  color: lightcyan;
+}
+
+.dog-12 {
+  color: lightcyan;
+}
+
+.typo-cool {
+  font-family: Tahoma;
+  font-size: 13px;
+}
+
+.typo-noCool {
+  font-family: "Comic Sans MS";
+  font-size: 13px;
+}
+
+.typo-extraCool {
+  font-family: "Impact";
+  font-size: 13px;
+}/*# sourceMappingURL=styles.css.map */

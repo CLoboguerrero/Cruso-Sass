@@ -1,0 +1,30 @@
+//Funciones custom que genera o imprime código que se usará muchas veces:
+// se define con @mixin + nombre
+
+//El siguiente mixin será usado en la clase ".card" dentro del archivo _layout.scss 
+
+// @mixin flex {
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: center;
+//     align-items: center;
+// }
+
+
+//Los mixins pueden ser parametrizados, como funciones:
+// @mixin flex ($df, $jc, $ai) {
+//     flex-wrap: wrap;
+//     display: $df;
+//     justify-content: $jc;
+//     align-items: $ai;
+// }
+
+//Los mixins crean reglas de estilo SEPARADAS. Cuando queremos que dos clases tengan el mismo estilo, entonces se usa el placeholder.
+
+//Los parámetros pueden tener valores iniciales (argumentos):
+@mixin flex ($df: flex, $jc: start, $ai: start) {
+    flex-wrap: wrap;
+    display: $df;
+    justify-content: $jc;
+    align-items: $ai;
+}

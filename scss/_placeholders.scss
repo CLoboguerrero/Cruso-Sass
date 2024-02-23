@@ -1,0 +1,20 @@
+//Parecidos a los mixins pero hacen algo distinto al momento de la implementación e interpilado.
+
+// %fontSizeLarge {
+//     line-height: 1.5em;
+//     font-size: 50px;
+//     font-family: $font-second;
+// }
+
+//Se pueden agrupar estilos que tienen el mismo nombre inicial o prefijo:
+//El placeholder
+
+
+%fontSizeLarge {
+    line-height: 1.5em;
+    font: {
+        size: 50px;
+        family: $font-second;
+        style: italic;
+    }
+}
